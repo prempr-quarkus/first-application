@@ -26,7 +26,13 @@ java -Dquarkus.datasource.password=youshallnotpass -jar target/myapp-runner.jar
 ```
 
 ## Native build time
+
 ```bash
 ./mvnw package -Pnative -Dquarkus.profile=prod-aws
 ./target/my-app-1.0-runner
+
+## Adding YML configuration
+
+```bash
+mvnw quarkus:add-extension -Dextensions="config-yaml"
 ```

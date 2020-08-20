@@ -1,0 +1,34 @@
+# YAML supports comments
+quarkus:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/some-database
+    driver: org.postgresql.Driver
+    username: quarkus
+    password: quarkus
+
+# REST Client configuration property
+org:
+  acme:
+    restclient:
+      CountriesService/mp-rest/url: https://restcountries.eu/rest
+
+# For configuration property names that use quotes, do not split the string inside the quotes.
+quarkus:
+  http:
+    cors:
+      ~: true
+      methods: GET,PUT,POST
+  log:
+    category:
+      "io.quarkus.category":
+        level: INFO
+
+"%dev":
+  quarkus:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/some-database
+      driver: org.postgresql.Driver
+      username: quarkus
+      password: quarkus
+
+  
